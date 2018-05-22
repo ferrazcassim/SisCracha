@@ -40,28 +40,15 @@
 
 <script type="text/javascript">
 var app = new Vue({
-    el: '#app',
-    data: {
-        dados: []
-    },
-    //get data properties from api
-    created() {
-        fetch("http://medicinapetropolis.com.br/ApiSisCracha/api/ListarPedidos/Pendentes")
-        .then(response => response.json())
-        .then(json =>{
-                this.dados = json;
-                console.log(this.dados);
-            })
-        },
-    // data properties to insert on api
-    sendData() {
-        axios.post("http://medicinapetropolis.com.br/ApiSisCracha/api/CadastrarPedido/", {
-            Nome: this.Nome,
-            Matricula: this.Matricula,
-            Curso: this.Curso                
-        }).then((response) => {})
-        .catch((e) => {
-            console.log(e)
+el: '#app',
+data: {
+    dados: []
+},
+created() {
+    fetch("http://medicinapetropolis.com.br/ApiSisCracha/api/ListarPedidos/Pendentes")
+    .then(response => response.json())
+    .then(json =>{
+        	this.dados = json;
         })
     }
 });

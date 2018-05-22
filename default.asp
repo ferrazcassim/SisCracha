@@ -7,20 +7,19 @@
                 <div class="header">
                     <h4>SisCrachá FMP/FASE</h4>
                     <p class="text-right">
-                        <a href="aluno.asp" class="btn btn-info text-uppercase">Novo Pedido Acadêmico</a>
-                        <a href="pedidos_rh.asp" class="btn btn-default text-uppercase">Novo Pedido Recursos Humanos</a>
+
+                        <!--RENDER AREA SECRETARIA-->             
+                        <a href="aluno.asp" class="btn btn-info text-uppercase moduloSerac">Novo Pedido Acadêmico</a>
+                        <!--FIM RENDER SECRETARIA-->
+
+                          <!--RENDER AREA SECRETARIA-->  
+                        <a href="pedidos_rh.asp" class="btn btn-default text-uppercase moduloRH">Novo Pedido Recursos Humanos</a>
+                          <!--FIM RENDER AREA SECRETARIA-->  
                     </p>
                     <hr>
+                    
                 </div>
                 <div class="content">
-                    <div class="row">
-                        <div class="col-md-6">
-                            
-                        </div>
-                        <div class="col-md-6">
-
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
