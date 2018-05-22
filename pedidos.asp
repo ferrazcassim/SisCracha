@@ -58,8 +58,7 @@ $(document).ready(function(){
     $('#form').submit(function(e){
 
         e.preventDefault();
-        //var apiurl = "http://medicinapetropolis.com.br/ApiSisCracha";
-        var apiurl = "http://localhost:57460";
+        var apiurl = "http://medicinapetropolis.com.br/ApiSisCracha";
 
         var data = [];
 

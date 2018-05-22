@@ -40,12 +40,6 @@
     <script src="assets/js/alertify.js"></script>
     <script src="assets/js/bootstrap-datepicker.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vuejs-paginator/2.0.2/vuejs-paginator.js"></script>
-	<!-- <script src="assets/js/darkroom.js"></script>
-	<script src="assets/css/darkroom.css"></script> -->
-	<!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
-    <script src="assets/js/verificaLogin.js"></script>  
-    <script src="assets/js/getCookies.js"></script>  
 </head>
 <body>
 
@@ -60,69 +54,27 @@
                 <a href="default.asp" class="simple-text">
                     <span class="pe-7s-keypad"></span> SisCrachá
                 </a>
-                 <div class="boxUser">
-                <div class="clear-fix" style="height:10px;"></div>
-
-                <img src="" class="imgUser">
-
-                <div class="clear-fix" style="height:10px;"></div>
-
-                <b><span class="nomeUsuario"> 
-                </span><b>
-
-                <div class="clear-fix"></div>
-
-                <small><span class="nomeCompleto"> 
-                </span></small>
-
-                 <div class="clear-fix" style="height:10px;"></div>
-                 
-                    <a href="login.asp" class="btn btn-primary btnSair">
-                        <span class="pe-7s-repeat"></span>
-                        SAIR
-                    </a>
-               
-
             </div>
-            </div>   
-
-            <!--LISTA CONTENDO AS OPÇOES EM COMUM PARA TODOS OS USUARIOS-->
             <ul class="nav">
-                 <li class="active">
+                <li class="active">
                     <a href="default.asp">
                         <i class="pe-7s-graph"></i>
-                        <p>INÍCIO</p>
+                        <p>Dashboard</p>
                     </a>
                 </li>
-            </ul>
-            <!--FIM LISTA TODOS OS USUARIOS-->
-
-
-            <!--LISTA DOS ITENS RH-->
-            <ul class="nav moduloRH">            
-                 
+                <li>
+                    <a href="aluno.asp">
+                        <i class="pe-7s-add-user"></i>
+                        <p>Adicionar Pedido Aluno</p>
+                    </a>
+                </li>
                 <li>
                     <a href="pedidos_rh.asp">
                         <i class="pe-7s-users"></i>
                         <p>Pedidos RH</p>
                     </a>
                 </li>
-            
-            </ul>
-            <!--FIM LISTA RH-->
-
-         <ul class="nav moduloSerac">
-                   <li>
-                    <a href="aluno.asp">
-                        <i class="pe-7s-add-user"></i>
-                        <p>Adicionar Pedido Aluno</p>
-                    </a>
-                </li>
-            </ul>
-
-
-            <ul class="nav moduloGerencia">
-               <li>
+                <li>
                     <a href="pedidos.asp">
                         <i class="pe-7s-cloud-download"></i>
                         <p>Finalizar Pedidos</p>
@@ -133,17 +85,21 @@
                         <i class="pe-7s-ticket"></i>
                         <p>Finalizados</p>
                     </a>
-                </li>                   
+                </li>
+                <li>
+                    <a href="antigos.asp">
+                        <i class="pe-7s-pin"></i>
+                        <p>Antigos</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.asp">
+                        <i class="pe-7s-back"></i>
+                        <p>Logout</p>
+                    </a>
+                </li>
             </ul>
-               
-             
-             
- 
-
-         
-
-           
-        </div>       
+        </div>
     </div>
 
 <div class="main-panel">
@@ -156,7 +112,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand top-nav-title" href="default.asp">INÍCIO</a>
+            <a class="navbar-brand top-nav-title" href="default.asp">Dashboard</a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-left">
@@ -168,16 +124,15 @@
                 </li>
 
             </ul>
-            <!--ul class="nav navbar-nav navbar-right">
-              <li class="separator hidden-lg"></li>
-                 <li>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
                     <a href="login.asp" class="btn btn-info btn-sair">
                         <span class="pe-7s-repeat"></span>
                         SAIR
                     </a>
                 </li>
                 <li class="separator hidden-lg"></li>
-            </ul-->
+            </ul>
         </div>
     </div>
 </nav>

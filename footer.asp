@@ -41,8 +41,40 @@ function setModalsAndBackdropsOrder() {
 <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 <script src="assets/js/demo.js"></script>
 
-<script src="assets/js/validaLogin.js"></script>
-
-
+<!-- The crop javascript  files -->
+<script src="http://yui.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+<script src="crop/cropbox.js"></script>
+<!-- <script src="crop/cropbox-min.js"></script> -->
+<script type="text/javascript">
+YUI().use('node', 'crop-box', function(Y){
+    var options =
+    {
+        imageBox: '.imageBox',
+        thumbBox: '.thumbBox',
+        spinner: '.spinner',
+        // imgSrc: 'avatar.png'
+    }
+    var cropper = new Y.cropbox(options);
+    Y.one('#file').on('change', function(){
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            options.imgSrc = e.target.result;
+            cropper = new Y.cropbox(options);
+        }
+        reader.readAsDataURL(this.get('files')._nodes[0]);
+        this.get('files')._nodes = [];
+    })
+    Y.one('#btnCrop').on('click', function(){
+        var img = cropper.getDataURL()
+        Y.one('.cropped').append('<img src="'+img+'">');
+    })
+    Y.one('#btnZoomIn').on('click', function(){
+        cropper.zoomIn();
+    })
+    Y.one('#btnZoomOut').on('click', function(){
+        cropper.zoomOut();
+    })
+})
+</script>
 </body>
 </html>
