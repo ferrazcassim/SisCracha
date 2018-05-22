@@ -27,6 +27,8 @@
     <link href="assets/css/main.css" rel="stylesheet" />
 
 
+
+
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
@@ -36,7 +38,8 @@
     <script src="assets/js/vue.js"></script>
     <script src="assets/js/vuex.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
+    <script src="assets/js/login.js"></script>
+    
     <style>
         body {
             background: url('assets/img/bg.jpg');
@@ -60,16 +63,18 @@
                             <hr>
                         </div>
                         <div class="content">
-                            <form action="default.asp" method="POST">
+                            <form method="POST" name="formLogin">
                                 <p>
-                                    <input type="text" name="usuario" value="" class="form-control" placeholder="Usuário">
+                                    <input type="text" id="usuario" required name="usuario" value="" class="form-control" placeholder="Usuário">
                                 </p>
                                 <p>
-                                    <input type="text" name="senha" value="" class="form-control" placeholder="Senha">
+                                    <input type="password" id="senha" required name="senha" value="" class="form-control" placeholder="Senha">
+                                    <div class="alert alert-info avisoUser" style="display:none;">
+                                        <span>Usuário ou senha invalido(s).</span>
+                                    </div>
                                 </p>
                                 <p class="text-center">
-                                    <!-- <input type="submit" name="ENVIAR" class="btn btn-primary"> -->
-                                    <a href="default.asp" class="btn btn-info">LOGIN</a>
+                                    <a href="#" class="btn btn-primary btnLogar">ENTRAR</a>                                
                                 </p>
                             </form>
                         </div>
